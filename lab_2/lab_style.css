@@ -17,6 +17,7 @@ body {
   
   p,ul,ol,dl,address {
     font-size: 1.1em;
+    font-style:normal;
   }
   
   p, li, dd, dt, address {

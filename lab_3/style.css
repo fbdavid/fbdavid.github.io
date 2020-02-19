@@ -32,9 +32,13 @@ h1 {
   font-size: 4rem;
   text-align: center;
   text-shadow: 2px 2px 10px black;
+  font-family: 'Libre Barcode 39 Text', cursive;
+  font-weight: bolder;
+  font-weight: 900;
 }
 
 h2 {
+  font-family: 'Libre Barcode 39 Text', cursive;
   font-size: 3rem;
   text-align: center;
 }
@@ -62,7 +66,7 @@ body > * {
 }
 
 main, header, nav, article, aside, footer, section {
-  background-color: rgba(0,255,0,0.5);
+  background-color: rgba(2, 107, 228, 0.5);
   padding: 1%;
 }
 

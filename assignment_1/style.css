@@ -1,0 +1,137 @@
+/* || General setup */
+
+html {
+  margin: 0;
+  padding: 0;
+ 
+}
+body{
+margin:auto;
+}
+html {
+  font-size: 10px;
+  background-color:#F2B999;
+}
+
+
+
+/* || typography */
+
+.header h1 {
+  font-family: 'IBM Plex Serif' ;
+  color: #FFFAFF;
+  text-align:left;
+}
+
+
+.container{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  max-width:960px;
+  align-items:flex-start;
+  justify-content: space-between;
+}
+
+.wrapper{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.edu {
+  flex:0 2 auto;
+  align-content: space-around;
+  background-color: #FFFAFF;
+  border-radius:4px;
+  padding:15px;
+  
+}
+
+.edu h2 {
+  font-family: 'Bree Serif' ;
+  background-color:#FFFAFF;
+}
+
+.edu li{
+  font-family: 'Noto Serif SC' ;
+}
+.jobtitle{
+  font-style:italic;
+}
+.me {
+  width:175px;
+  flex: 0 1 auto;
+  margin-right:15px;
+  margin-top:15px
+}
+
+.me img {
+  width:inherit;
+  border:solid 1px #FFFAFF;
+  border-radius:4px;
+
+}
+
+
+.cap { 
+  flex:0 1 auto;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #2a2a2a;
+  background-color: #FFFAFF;
+  padding:15px;
+  align-content:center;
+}
+
+/* || header layout */
+
+
+
+.header {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center;
+  margin: 0;
+  padding:15px;
+  background-color: #593239;
+  flex-wrap:wrap;
+}
+
+.header h1{
+  font-size:5em;
+}
+
+
+.header img {
+  height: auto;
+  width: auto;
+  padding-top: 20px;
+  padding-right: 20px;
+  
+}
+
+
+
+/* Roles */
+
+
+.jobtitle{
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+@media screen and (max-width:1000px) {
+  .container{
+    justify-content:center;
+  }
+  .me{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex:1 0 auto;
+    align-items:center;
+    justify-content: space-evenly;
+  }
+}

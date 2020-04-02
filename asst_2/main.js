@@ -16,7 +16,7 @@ displayedImage.src = fav.target.src;
 }
 /* for loop from https://www.w3schools.com/java/java_for_loop.asp */
 
-    
+    dfddfdvdvdvvdve
 /* Wiring up the Darken/Lighten button */
 
 

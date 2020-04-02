@@ -44,6 +44,6 @@ button {
   flex-direction: row;
   flex-wrap: wrap;
   width: 20%;
-  float: right;
+  float: left;
   cursor: pointer;
 }

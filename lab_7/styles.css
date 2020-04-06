@@ -13,6 +13,32 @@ h3 {
   line-height: 1.2
 }
 
+
+
+#mapid {
+  height:480px;
+  width: 680px;
+}
+
+
+.leaflet-popup-content{
+    line-height: 1.5;
+    font-weight: 700;
+    text-align: left;
+    font-family:'Courier New', Courier, monospace;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 /* End document default styles */
 .code {
   background-color: rgb(255, 231, 202);
@@ -74,6 +100,7 @@ h3 {
   padding: 10px;
   overflow-wrap: break-word;
   margin: 25px 50px;
+  align-items: center;
 }
 
 .activate {

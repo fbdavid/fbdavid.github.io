@@ -3,14 +3,12 @@
   <head>
     <title>Charts Lab</title>
     <link rel="stylesheet" type="text/css" href="./styles.css" />
-    
   </head>
   <body>
     <div class="container">
       <div class="wrapper">
         <div class="header">Frontend Libraries: Charts Lab</div>
         <div class="content">
-        
           <div id="chartContainer" styles="height: 300px; width:100%;"></div>
         </div>
 
@@ -18,37 +16,35 @@
       </div>
     </div>
     <script>
-      fetch(' https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json') // replace this with the food safety data set
+      fetch(" https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json") // replace this with the food safety data set
         .then((response) => response.json())
         .then((data) => {
-
           console.log(data);
           const clearEmptyData = data.filter((f) => f.geocoded_column_1);
-          const refined = clearEmptyData.map((m) =>({
+          const refined = clearEmptyData.map((m) => ({
             category: m.category,
             name: m.name,
             latlong: m.geocoded_column_1.coordinates,
-
-        }));
-            return refined;
-      })
+          }));
+          return refined;
+        })
         .then((data) => {
-          return data.reduce((r,current) => {
+          return data.reduce((r, current) => {
             if (!r[current.category]) {
               r[current.category] = [];
             }
             r[current.category].push(current);
             return r;
           }, {});
-
         })
 
-        .then((data) => { // this is an explicit return. If I want my information to go further, I'll need to use the "return" keyword before the brackets close
+        .then((data) => {
+          // this is an explicit return. If I want my information to go further, I'll need to use the "return" keyword before the brackets close
           console.log("new data", data);
           const reformattedData = Object.entries(data).map((current, i) => {
             console.log(current);
             return {
-              y:current[1].length,
+              y: current[1].length,
               label: current[0],
             };
           });
@@ -57,33 +53,31 @@
 
         .then((r) => {
           console.log(r);
-          chart = new CanvasJS.Chart("chartContainer", {
+           var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
             title: {
               text: "Let's Find Somewhere to Eat",
-            }, 
+            },
             axisX: {
               labelFontSize: 8,
               margin: 10,
               interval: 1,
             },
-            axisY2:{
-		        interlacedColor: "rgba(1,77,101,.2)",
-		        gridColor: "rgba(1,77,101,.1)",
+            axisY2: {
+              interlacedColor: "rgba(1,77,101,.2)",
+              gridColor: "rgba(1,77,101,.1)",
             },
             data: [
               {
-                type:"bar",
+                type: "bar",
                 color: "#014D65",
                 dataPoints: r,
               },
             ],
           });
           chart.render();
-        })
-
+        });
     </script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   </body>
 </html>
-
